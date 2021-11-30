@@ -1,100 +1,185 @@
 @import url('reset.css');
 @import url('common.css');
 
-/* common */
-body{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 16px;
-    box-sizing: border-box;
-    color: #111;
-}
-a{
-    color: inherit;
-    font-size: inherit;
-}
-a:hover{
-    text-decoration: none;
-}
-img{
-    width: 100%;
+.sub-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 /* 헤더 */
 .gnb{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 20px 15px;
     box-sizing: border-box;
+    justify-content: space-between;
 }
-.main-menu{
+.gnb .main-menu{
+    
+}
+.gnb .xi-bars{
+    display: none;
+}
+.menu-list{
     font-weight: 500;
-    margin-left: 60px;  
+    margin-right: 60px;
 }
-.main-menu li+li{
+.menu-list li+li{
     margin-left: 60px;
+}
+.search-form{
+    margin-right: 30px;
+}
+.search-form input{
+    width: 150px;
+    border: 1px solid #dddddd;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 25px;
+    box-sizing: initial;
+}
+.search-form .search{
+    position: relative;
+}
+.search-form a{
+    position: absolute;
+    top: 9px;
+    right: 10px;
 }
 .member li{
     font-size: 0.750rem;
     color: #999;
     font-weight: 300;
 }
-.member:last-child li{
+.member li:last-child{
     margin-left: 15px;
 }
 
 /* 메인 이미지 */
-.swiper-slide{
-    width: 100%;
-    /* height: 600px; */
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.swiper-slide a{
-    padding: 170px 0;
+.main-slide a{
+    position: relative;
     display: block;
-    height: 100%;
-    width: 100%;
-    
-    /* background: linear-gradient(to left, transparent, white) */
-}
-.swiper-slide .bgc-area1{
-    background: linear-gradient(to right, rgba(65, 55, 47, 0.9) 50%, rgba(0, 0, 0, 0) 50%);
-}
-.swiper-slide .bgc-area2{
-    background: linear-gradient(to right, rgba(40, 33, 28, 0.9) 50%, rgba(0, 0, 0, 0) 50%);
-}
-.swiper-slide .bgc-area3{
-    background: linear-gradient(to right, rgba(52, 30, 30, 0.9) 50%, rgba(0, 0, 0, 0) 50%);
 }
 .swiper-slide a:hover{
     color: #111;
 }
-.swiper-slide a .text-area{
+.main-slide a .con-box{
+
+}
+.main-slide .main-mo{
+    display: none;
+}
+.main-slide a .con-box::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0) 70%);
+    position: absolute;
+}
+.main-slide a .con-box .text-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 1200px;
-    margin: 0 auto;
+    padding: 0 15px;
     color: #fff;
 }
-.text-area .small-tit{
+.swiper-slide .text-wrap .small-tit{
     font-size: 1.125rem;
-    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.4);
     padding: 3px 10px;
     font-weight: 300;
 }
-.swiper-slide a p{
+.swiper-slide .text-wrap p{
     font-size: 2rem;
     line-height: 3.250rem;
     letter-spacing: -2px;
     padding-top: 30px;
 }
-.swiper-slide a p span{
+.swiper-slide .text-wrap p span{
     font-size: 3rem;
 }
-.main_bg1{
-    background: url('../img/main_bg01.jpg');
+
+/* 마루선택가이드 */
+.select_guide .content{
+    background: #f2f2f2;
+    padding: 25px 0;
 }
-.main_bg2{
-    background: url('../img/main_bg02.jpg');
+.select_guide .xi-info{
+    color: green;
+    font-size: 1.375rem;
+    padding-right: 5px;
 }
-.main_bg3{
-    background: url('../img/main_bg03.jpg');
+.select_guide .content h2{
+    margin-left: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: green;
+    text-decoration: underline;
+}
+
+/* 제품찾기 */
+.product .pd_box{
+    padding: 100px 50px;
+    border-radius: 30px;
+    margin: 15px;
+    
+}
+.product .pd_bg1{
+    background: url('../img/product01.jpg');
+}
+.product .pd_bg2{
+    background: url('../img/product02.jpg');
+}
+.product .pd_bg3{
+    background: url('../img/product03.jpg');
+}
+.product .pd_bg4{
+    background: url('../img/product04.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.product .pd_bg5{
+    background: url('../img/product05.jpg');
+    background-size: cover;
+}
+.product .pd_bg6{
+    background: url('../img/product06.jpg');
+}
+
+
+
+
+/* 미디어쿼리 */
+@media (max-width:1200px){
+    .search-form{
+        display: none;
+    }
+    .main-slide a .con-box .text-wrap{
+        width: 100%;
+    }
+}
+@media (max-width:1025px){
+    .main-slide .main-pc{
+        display: none;
+    }
+    .main-slide .main-mo{
+        display: block;
+    }
+}
+@media (max-width:769px){
+    .gnb{
+        
+        align-items: center;
+    }
+    .gnb .main-menu{
+        display: none;
+    }
+    .gnb .xi-bars{
+        display: block;
+        font-size: 2.5rem;
+    }
 }
