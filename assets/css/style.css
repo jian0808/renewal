@@ -179,6 +179,11 @@
 .other_info .other_cont a{
     display: inline-block;
 }
+.other_info .other_cont h3{
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
 .other_info .other_cont .icon_area{
     background: #8ecf60;
     width: 100px;
@@ -189,7 +194,7 @@
 
 /* 블로그 */
 .blog {
-    background: #f9f9f9;
+    background: #f9f9f9;    
 }
 .blog h2{
     padding-bottom: 65px;
@@ -197,14 +202,17 @@
 .blog_go{
     text-align: end;
     margin-right: 15px;
+    font-weight: 300;
 }
 .blog .blog_list{
     justify-content: space-between;
 }
 .blog .blog_list .blog_box{
-    padding: 300px 60px 40px;
+    padding: 300px 30px 40px;
     margin: 15px;    
     border-radius: 20px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 .blog .blog_list .blog_bg1{
     background: url('../img/blog01.jpg') no-repeat;
@@ -221,6 +229,26 @@
 .blog .blog_list .blog_bg4{
     background: url('../img/blog01.jpg');
     background-size: cover;
+}
+
+/* 푸터 */
+footer{
+    background: #444;
+}
+footer .f_left{
+    width: 70%;
+}
+footer .f_left .f_menu{
+    color: #fff;
+}
+footer .f_left .company_info{
+    color: rgba(255,255,255,.7);
+}
+footer .f_right{
+    width: 30%;
+}
+footer .f_right .sns i{
+    font-size: 2rem;
 }
 
 
