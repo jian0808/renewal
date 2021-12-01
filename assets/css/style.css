@@ -204,6 +204,7 @@
 .blog .blog_list .blog_box{
     padding: 300px 60px 40px;
     margin: 15px;    
+    border-radius: 20px;
 }
 .blog .blog_list .blog_bg1{
     background: url('../img/blog01.jpg') no-repeat;
