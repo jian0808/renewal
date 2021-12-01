@@ -15,9 +15,6 @@
     box-sizing: border-box;
     justify-content: space-between;
 }
-.gnb .main-menu{
-    
-}
 .gnb .xi-bars{
     display: none;
 }
@@ -124,8 +121,14 @@
 .product .pd_box{
     padding: 100px 50px;
     border-radius: 30px;
-    margin: 15px;
-    
+    margin: 15px;    
+}
+.product h2{
+    padding-bottom: 65px;
+}
+.product .pd_list h3{
+    text-align: center;
+    font-size: 1.250rem;
 }
 .product .pd_bg1{
     background: url('../img/product01.jpg');
@@ -150,7 +153,74 @@
     background: url('../img/product06.jpg');
 }
 
+/* 시공사례 */
+.interior{
+    background: #f9f9f9;
+    padding: 80px 0;
+}
+.interior h2{
+    padding-bottom: 60px;
+}
+.interior .center button{
+    display: none !important;
+}
+.interior .int_slide .int_box{
+    margin: 20px;
+}
+.interior .more_view{
+    padding-top: 30px;
+    text-decoration: underline;
+}
 
+/* 추가정보 */
+.other_info h2{
+    padding-bottom: 65px;
+}
+.other_info .other_cont a{
+    display: inline-block;
+}
+.other_info .other_cont .icon_area{
+    background: #8ecf60;
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+/* 블로그 */
+.blog {
+    background: #f9f9f9;
+}
+.blog h2{
+    padding-bottom: 65px;
+}
+.blog_go{
+    text-align: end;
+    margin-right: 15px;
+}
+.blog .blog_list{
+    justify-content: space-between;
+}
+.blog .blog_list .blog_box{
+    padding: 300px 60px 40px;
+    margin: 15px;    
+}
+.blog .blog_list .blog_bg1{
+    background: url('../img/blog01.jpg') no-repeat;
+    background-size: cover;
+}
+.blog .blog_list .blog_bg2{
+    background: url('../img/blog01.jpg');
+    background-size: cover;
+}
+.blog .blog_list .blog_bg3{
+    background: url('../img/blog01.jpg');
+    background-size: cover;
+}
+.blog .blog_list .blog_bg4{
+    background: url('../img/blog01.jpg');
+    background-size: cover;
+}
 
 
 /* 미디어쿼리 */

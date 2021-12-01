@@ -43,6 +43,9 @@ section{
 .wrap{
     flex-wrap: wrap;
 }
+.col-25{
+    width: 25%;
+}
 .col-33{
     width: 33.33%;
 }
