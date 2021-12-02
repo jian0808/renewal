@@ -1,10 +1,4 @@
-$("#listWrap").mouseenter(function(){
-  $(".list1").css("display","block");
-});
 
-$("#listWrap").mouseleave(function(){
-  $(".list1").css("display","none");
-});
 
 
 // main slide Swiper
