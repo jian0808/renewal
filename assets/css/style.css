@@ -9,6 +9,13 @@
 }
 
 /* 헤더 */
+header{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top:0;
+    z-index: 9999;
+}
 .gnb{
     max-width: 1200px;
     margin: 0 auto;
@@ -47,7 +54,7 @@ header .mainMenu > li:hover .submenu {
 header .mainMenu > li .submenu > li { 
     display:inline-block; 
     width:100%; 
-    padding:15px 10px; 
+    padding: 15px 20px; 
     background:#fff;
     text-align:center;
 }
@@ -85,6 +92,9 @@ header .mainMenu > li .submenu > li:hover {
 }
 
 /* 메인 이미지 */
+.main-slide{
+    margin-top: 90px;
+}
 .main-slide a{
     position: relative;
     display: block;
@@ -156,40 +166,63 @@ header .mainMenu > li .submenu > li:hover {
 }
 
 /* 제품찾기 */
-.product .pd_box{
-    padding: 100px 50px;
-    border-radius: 30px;
-    margin: 15px;    
-}
 .product h2{
     padding-bottom: 65px;
 }
-.product .pd_list h3{
+.card{
+    width: 100%;    
+    margin: 15px;   
+    border-radius: 30px; 
+    overflow: hidden;
+    position: relative;
+}
+.card img{
+    height: 240px;  
+    transition: .3s;  
+}
+.textBox{
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    box-sizing: border-box;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transition: .3s;
+}
+.textBox h3{
     font-size: 1.250rem;
-    font-weight: 500;
+    padding-bottom: 15px;
 }
-.product .pd_bg1{
-    background: url('../img/product01.jpg');
+.textBox p{
+    visibility: hidden;
+    opacity: 0;
+    line-height: 1.2rem;
 }
-.product .pd_bg2{
-    background: url('../img/product02.jpg');
+.textBox span{
+    text-decoration: underline;
+    font-size: 0.875rem;
+    font-weight: 300;
 }
-.product .pd_bg3{
-    background: url('../img/product03.jpg');
+.card:hover .textBox{
+    width: 100%;    
+    height: 100%;
+    bottom: 0;
+    padding: 70px 30px;
+    background: rgba(0, 0, 0, 0.4);
 }
-.product .pd_bg4{
-    background: url('../img/product04.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.card:hover img{
+    transform: scale(1.1);
 }
-.product .pd_bg5{
-    background: url('../img/product05.jpg');
-    background-size: cover;
+.card:hover p{
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 30px;
 }
-.product .pd_bg6{
-    background: url('../img/product06.jpg');
+.card .textBox span:hover{
+    color: rgb(0, 209, 0);
 }
 
 /* 시공사례 */
@@ -198,14 +231,45 @@ header .mainMenu > li .submenu > li:hover {
     padding: 80px 0;
 }
 .interior h2{
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 .interior .center button{
     display: none !important;
 }
-.interior .int_slide .int_box{
+.interior .interior_slide .interior_box{
     margin: 20px;
+    position: relative;
 }
+.interior .interior_slide .interior_box img{
+    transition: 0.3s;
+}
+.interior .interior_slide .interior_box img:hover{
+    transform: translateY(-2%);
+    -webkit-box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12); 
+box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.interior_info{
+    position: absolute;
+    bottom: 9%;
+    right: 6%;
+    color: #000;
+    opacity: 0;
+    transition: 0.3s;
+}
+.interior .interior_slide .interior_box:hover .interior_info{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.interior_info p{
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50px 50px;
+}
+
 .interior .more_view{
     padding-top: 30px;
     text-decoration: underline;
@@ -214,6 +278,9 @@ header .mainMenu > li .submenu > li:hover {
 /* 추가정보 */
 .other_info h2{
     padding-bottom: 65px;
+}
+.other_info .other_cont .info_box{
+    margin: 0 55px;
 }
 .other_info .other_cont a{
     display: inline-block;
@@ -226,7 +293,6 @@ header .mainMenu > li .submenu > li:hover {
 .other_info .other_cont .img_area{
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 55px;
 }
 .other_info .other_cont .img_area img{
     margin-bottom: -2px;
