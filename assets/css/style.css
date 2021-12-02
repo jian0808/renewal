@@ -19,15 +19,8 @@
 .gnb .xi-bars{
     display: none;
 }
-/* .menu-list{
-    font-weight: 500;
-    margin-right: 60px;
-}
-.menu-list li+li{
-    margin-left: 60px;
-} */
 
-/* 헤더 > 드롭다운 */
+/* 헤더 드롭다운 start */
 header #container {
     margin-right: 60px;
 }
@@ -54,13 +47,14 @@ header .mainMenu > li:hover .submenu {
 header .mainMenu > li .submenu > li { 
     display:inline-block; 
     width:100%; 
-    padding:5px 10px; 
+    padding:15px 10px; 
     background:#fff;
     text-align:center;
 }
 header .mainMenu > li .submenu > li:hover { 
     background:#fff;
 }
+/* 헤더 드롭다운 end */
 
 .search-form{
     margin-right: 30px;
