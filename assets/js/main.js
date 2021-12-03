@@ -1,13 +1,14 @@
 AOS.init();
 
-// header nav
-$('#mainMenu').mouseover(function(){
-  $('.dropdown').css('display','block');
-})
+$(function(){
+    $('.pc-menu').mouseover(function(){
+    $('.sub-menu, .subMenu_bg').stop().slideDown()
+  });
 
-$('#mainMenu').mouseout(function(){
-  $('.dropdown').css('display','none');
-})
+  $('.pc-menu').mouseout(function(){
+    $('.sub-menu, .subMenu_bg').stop().slideUp()
+  });
+});
 
 // main slide Swiper
   var swiper = new Swiper(".mySwiper", {

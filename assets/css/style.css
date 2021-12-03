@@ -16,53 +16,76 @@ header{
     top:0;
     z-index: 9999;
 }
+.logo{
+    width: 12%;
+}
 .gnb{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 20px 0;
     box-sizing: border-box;
     justify-content: space-between;
+    position: relative;
+    z-index: 9;
 }
 .gnb .xi-bars{
     display: none;
 }
-.menu>li{
-    padding: 0 30px;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-.menu a:hover{
+.pc-menu a:hover{
     color: green;
 }
 
-/* 헤더 드롭다운 start */
-#mainMenu{
-    position: relative;
+/* dropdown start */
+.mainMenu{
+    width: 55%;
+    justify-content: space-between;
+    align-items: center;
 }
-.dropdown{
-    width: 100%;
+.mainMenu .pc-menu>li{
+    width: 25%;
+    position: relative;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.mainMenu .pc-menu a{
+    display: block;
+    text-align: center;
+}
+.mainMenu .pc-menu>li>a{
+    padding: 20px 0;
+}
+
+.mainMenu .pc-menu .sub-menu{
     position: absolute;
-    margin-top: 30px;
+    width: 100%;
+    top: 90px;
+    left: 0;    
+    z-index: 10;
+    display: none;
+}
+.mainMenu .pc-menu .sub-menu>li{
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.subMenu_bg{
+    width: 300%;
+    height: 250px;
     background: #fff;
+    position: absolute;
+    top: 95px;
+    left: -30%;
     border-top: 1px solid #e9e9e9;
     display: none;
 }
-.dropdown .sub{
-    width: 780px;
-    margin: 0 auto;
-    padding: 15px 0;
+/* dropdown end */
+
+.mo-menu{
+    display: none;
 }
-.dropdown .submenu{
-    padding: 0 25px;  
-    text-align: center;
-}
-.dropdown .submenu>li{
-    padding: 15px 0;
-}
-/* 헤더 드롭다운 end */
 
 .search-form{
-    margin-right: 30px;
+    width: 20%;
 }
 .search-form input{
     width: 200px;
@@ -77,8 +100,11 @@ header{
 }
 .search-form a{
     position: absolute;
-    top: 7px;
-    right: 10px;
+    top: 6px;
+    right: 25px;
+}
+.member{
+    width: 8%;
 }
 .member li{
     font-size: 0.750rem;
@@ -325,8 +351,12 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     position: relative;
 }
 .blog .blog_list .blog_box a{
-    display: block;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);     
+    display: block;       
+}
+.blog .blog_list .blog_box .gradiant_bg{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);  
 }
 .blog .blog_list .blog_box a:hover .blog_bg{
     transform: scale(1.1);  
