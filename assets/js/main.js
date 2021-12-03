@@ -4,6 +4,7 @@ AOS.init();
 $('#mainMenu').mouseover(function(){
   $('.dropdown').css('display','block');
 })
+
 $('#mainMenu').mouseout(function(){
   $('.dropdown').css('display','none');
 })

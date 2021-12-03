@@ -36,12 +36,13 @@ header{
 }
 
 /* 헤더 드롭다운 start */
+#mainMenu{
+    position: relative;
+}
 .dropdown{
     width: 100%;
     position: absolute;
-    top: 95px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 30px;
     background: #fff;
     border-top: 1px solid #e9e9e9;
     display: none;
@@ -321,16 +322,20 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     overflow: hidden;
     text-align: center;
     font-size: 1.5rem;
+    position: relative;
 }
 .blog .blog_list .blog_box a{
-    display: inline-block;
-    width: 100%;
-    padding: 280px 0 35px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);
-    color: #fff;
-    font-size: 1.250rem;
-    line-height: 1.5rem;
+    display: block;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);     
 }
+.blog .blog_list .blog_box a:hover .blog_bg{
+    transform: scale(1.1);  
+}
+.blog .blog_list .blog_box .blog_bg{
+    width: 100%;    
+    padding: 185px 0;
+    transition: 0.3s;
+}   
 .blog .blog_list .blog_bg1{
     background: url('../img/blog01.jpg') no-repeat;
     background-size: cover;
@@ -347,22 +352,39 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     background: url('../img/blog04.jpg');
     background-size: cover;
 }
-.blog_i{
-    font-size: 1.5rem;
+.blog .blog_list .blog_box h4{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    color: #fff;
+    font-size: 1.250rem;
+    line-height: 1.5rem;
 }
+
 
 /* 푸터 */
 footer{
     background: #444;
 }
 footer .f_left{
-    width: 70%;
+    width: 70%;   
+    padding: 0 50px; 
 }
+
 footer .f_left .f_menu{
     color: #fff;
+    margin-bottom: 30px;
+}
+footer .f_left .f_menu li+li{
+    margin-left: 30px;
+}
+footer .f_left .f_menu li:hover{
+    text-decoration: underline;
 }
 footer .f_left .company_info{
     color: rgba(255,255,255,.7);
+    font-weight: 300;
+    line-height: 1.375rem;
 }
 footer .f_right{
     width: 30%;
@@ -376,6 +398,7 @@ footer .f_right .sns i{
     background: rgba(255,255,255,0.8);
     border-radius: 50%;
     padding: 7px;
+    color: #444;
 }
 
 
