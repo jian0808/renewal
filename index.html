@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>동화자연마루</title>
+    <!-- AOS js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- slick slider -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- swiper slide -->
@@ -21,64 +23,71 @@
             <a href="#" onclick = "return false">
                 <img src="assets/img/logo.jpg" alt="logo">
             </a>    
-            <div class="main-menu row row-center">
-                <div id="container">
-                    <ul class="mainMenu">
-                        <li class="menu1"><a href="#">회사소개</a></li>
-                        <li class="menu2">
-                            <a href="#" onclick = "return false">제품</a>
-                            <ul class="menu2_s submenu">
-                                <li><a href="#" onclick = "return false">목질바닥재</a></li>
-                                <li><a href="#" onclick = "return false">PVC바닥재</a></li>
-                                <li><a href="#" onclick = "return false">벽재</a></li>
-                                <li><a href="#" onclick = "return false">도어/몰딩</a></li>
-                                <li><a href="#" onclick = "return false">외장재</a></li>
-                                <li><a href="#" onclick = "return false">커머스</a></li>
-                            </ul>   
-                        </li>
-                        <li class="menu3">
-                            <a href="#" onclick = "return false">시공사례</a>
-                            <ul class="menu2_s submenu">
-                                <li><a href="#" onclick = "return false">시공사례</a></li>
-                                <li><a href="#" onclick = "return false">제품 카탈로그</a></li>
-                            </ul>   
-                        </li>
-                        <li class="menu4">
-                            <a href="#" onclick = "return false">커뮤니티</a>
-                            <ul class="menu2_s submenu">
-                                <li><a href="#" onclick = "return false">이벤트</a></li>
-                                <li><a href="#" onclick = "return false">홍보 영상</a></li>
-                            </ul>   
-                        </li>
-                        <li class="menu5">
-                            <a href="#" onclick = "return false">고객센터</a>
-                            <ul class="menu2_s submenu">
-                                <li><a href="#" onclick = "return false">전시장 찾기</a></li>
-                                <li><a href="#" onclick = "return false">인테리어점 찾기</a></li>
-                                <li><a href="#" onclick = "return false">제품문의</a></li>
-                                <li><a href="#" onclick = "return false">AS신청</a></li>
-                                <li><a href="#" onclick = "return false">품질보증</a></li>
-                            </ul>   
-                        </li>
-                    </ul>
-                </div>
-        
-                <form class="search-form">
-                    <div class="search">
-                        <input type="text" placeholder="제품을 검색해보세요.">
-                        <a href="#" onclick = "return false">
-                            <i class="xi-search"></i>
-                        </a>                    
-                    </div>                
-                </form>
-                <ul class="member row">
-                    <li><a href="#" onclick = "return false">LOGIN</a></li>
-                    <li><a href="#" onclick = "return false">JOIN</a></li>
-                </ul> 
-            </div>                        
+            <div id="mainMenu">                
+                <!-- 메인메뉴 -->
+                <ul class="menu row">
+                    <li class="menu1">
+                        <a href="#" onclick = "return false">제품</a>  
+                    </li>
+                    <li class="menu2">
+                        <a href="#" onclick = "return false">시공사례</a>  
+                    </li>
+                    <li class="menu3">
+                        <a href="#" onclick = "return false">커뮤니티</a>  
+                    </li>
+                    <li class="menu4">
+                        <a href="#" onclick = "return false">고객센터</a>  
+                    </li>
+                </ul>  
+                <!-- 드롭다운메뉴 -->
+                <div class="dropdown">
+                    <div class="sub row">
+                        <ul class="submenu">
+                            <li><a href="#" onclick = "return false">목질바닥재</a></li>
+                            <li><a href="#" onclick = "return false">PVC바닥재</a></li>
+                            <li><a href="#" onclick = "return false">벽재</a></li>
+                            <li><a href="#" onclick = "return false">도어/몰딩</a></li> 
+                            <li><a href="#" onclick = "return false">외장재</a></li> 
+                            <li><a href="#" onclick = "return false">커머스</a></li> 
+                        </ul> 
+                        <ul class="submenu">
+                            <li><a href="#" onclick = "return false">시공사례</a></li>
+                            <li><a href="#" onclick = "return false">제품카탈로그</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#" onclick = "return false">이벤트</a></li>
+                            <li><a href="#" onclick = "return false">홍보영상</a></li>
+                        </ul>
+                        <ul class="submenu">
+                            <li><a href="#" onclick = "return false">전시장찾기</a></li>
+                            <li><a href="#" onclick = "return false">인테리어점 찾기</a></li>
+                            <li><a href="#" onclick = "return false">제품문의</a></li>
+                            <li><a href="#" onclick = "return false">A/S 신청</a></li> 
+                            <li><a href="#" onclick = "return false">품질보증</a></li> 
+                        </ul> 
+                    </div>            
+                </div>                                          
+            </div>
+            <!-- 검색창 -->
+            <form class="search-form">
+                <div class="search">
+                    <input type="text" placeholder="제품을 검색해보세요.">
+                    <a href="#" onclick = "return false">
+                        <i class="xi-search"></i>
+                    </a>                    
+                </div>                
+            </form>
+            <!-- 로그인 -->
+            <ul class="member row">
+                <li><a href="#" onclick = "return false">LOGIN</a></li>
+                <li><a href="#" onclick = "return false">JOIN</a></li>
+            </ul>                      
             <i class="xi-bars"></i> 
-        </nav>        
+        </nav> 
+                          
     </header>
+
+    
 
     <!-- 메인 이미지 -->
     <section class="main-slide">
@@ -298,7 +307,7 @@
         <div class="container">
             <h2 class="sub-title">다른 정보가 더 필요하신가요?</h2>
             <div class="other_cont row col-center text-center">
-                <div class="info_box col-33">
+                <div class="info_box col-33" data-aos="fade-up" data-aos-duration="1500">
                     <a href="#" onclick = "return false">
                         <div class="img_area">
                             <img src="assets/img/other01.jpg" alt="지점찾기">
@@ -309,7 +318,7 @@
                         </div>                        
                     </a>                    
                 </div>
-                <div class="info_box col-33">
+                <div class="info_box col-33" data-aos="fade-up" data-aos-duration="2500">
                     <a href="#" onclick = "return false">
                         <div class="img_area">
                             <img src="assets/img/other02.jpg" alt="품질보증">
@@ -320,7 +329,7 @@
                         </div>                        
                     </a>                    
                 </div>
-                <div class="info_box col-33">
+                <div class="info_box col-33" data-aos="fade-up" data-aos-duration="3000">
                     <a href="#" onclick = "return false">
                         <div class="img_area">
                             <img src="assets/img/other03.jpg" alt="카탈로그">
@@ -393,7 +402,7 @@
                             <a href="#" onclick = "return false"><i class="xi-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#" onclick = "return false"><i class="xi-instagram"></i></a>
+                            <a href="#" onclick = "return false"><i class="xi-blogger"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -401,6 +410,8 @@
         </div>
     </footer>
     
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- jQuery 3.2.1 -->

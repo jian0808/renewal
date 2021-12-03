@@ -26,40 +26,37 @@ header{
 .gnb .xi-bars{
     display: none;
 }
+.menu>li{
+    padding: 0 30px;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.menu a:hover{
+    color: green;
+}
 
 /* 헤더 드롭다운 start */
-header #container {
-    margin-right: 60px;
+.dropdown{
+    width: 100%;
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-top: 1px solid #e9e9e9;
+    display: none;
 }
-header .mainMenu > li { 
-    display:inline-block; 
-    width:80px; 
-    padding: 0 15px; 
-    text-align:center;
-    position:relative;
-    z-index: 9999;
+.dropdown .sub{
+    width: 780px;
+    margin: 0 auto;
+    padding: 15px 0;
 }
-header .mainMenu > li:hover { 
-    background:#fff; 
+.dropdown .submenu{
+    padding: 0 25px;  
+    text-align: center;
 }
-header .mainMenu .submenu {
-    display:none; 
-    position:absolute; 
-    top:30px; 
-    left:0; 
-}
-header .mainMenu > li:hover .submenu { 
-    display:block; 
-}
-header .mainMenu > li .submenu > li { 
-    display:inline-block; 
-    width:100%; 
-    padding: 15px 20px; 
-    background:#fff;
-    text-align:center;
-}
-header .mainMenu > li .submenu > li:hover { 
-    background:#fff;
+.dropdown .submenu>li{
+    padding: 15px 0;
 }
 /* 헤더 드롭다운 end */
 
@@ -79,7 +76,7 @@ header .mainMenu > li .submenu > li:hover {
 }
 .search-form a{
     position: absolute;
-    top: 9px;
+    top: 7px;
     right: 10px;
 }
 .member li{
@@ -265,7 +262,7 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
 
 .interior_info p{
     display: inline-block;
-    padding: 12px 25px;
+    padding: 10px 25px;
     background: rgba(255,255,255,0.9);
     border-radius: 50px 50px;
 }
@@ -350,6 +347,9 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     background: url('../img/blog04.jpg');
     background-size: cover;
 }
+.blog_i{
+    font-size: 1.5rem;
+}
 
 /* 푸터 */
 footer{
@@ -367,8 +367,15 @@ footer .f_left .company_info{
 footer .f_right{
     width: 30%;
 }
+footer .f_right .sns li{
+    margin: 0 10px;
+}
 footer .f_right .sns i{
     font-size: 2rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 7px;
 }
 
 

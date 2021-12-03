@@ -1,5 +1,12 @@
+AOS.init();
 
-
+// header nav
+$('#mainMenu').mouseover(function(){
+  $('.dropdown').css('display','block');
+})
+$('#mainMenu').mouseout(function(){
+  $('.dropdown').css('display','none');
+})
 
 // main slide Swiper
   var swiper = new Swiper(".mySwiper", {
