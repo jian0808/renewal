@@ -19,6 +19,9 @@ header{
 .logo{
     width: 12%;
 }
+.logo img{
+    max-width: 100%;
+}
 .gnb{
     max-width: 1200px;
     margin: 0 auto;
@@ -35,7 +38,7 @@ header{
     color: green;
 }
 
-/* dropdown start */
+/* pc-menu dropdown */
 .mainMenu{
     width: 55%;
     justify-content: space-between;
@@ -78,10 +81,52 @@ header{
     border-top: 1px solid #e9e9e9;
     display: none;
 }
-/* dropdown end */
 
-.mo-menu{
+/* mo-menu dropdown */
+.mainMenu > .mo-menu {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    top: 80px;
+    left: 0; 
+    text-align: center;  
+    padding: 10px 0;
+    border-top: 1px solid #e9e9e9;
+    z-index: 10;
     display: none;
+}
+.mainMenu > .mo-menu > li{
+    font-size: 1.250rem;
+    padding: 20px 0;
+}
+.mainMenu > .mo-menu > .sub-menu > li {
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+}
+
+#accordion{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 15px 0;
+    display: none;
+}
+#accordion a:hover{
+    color: green;
+}
+#accordion h3{
+    padding: 15px 0;
+    font-size: 1.250rem;
+}
+#accordion ul{
+    background: #f2f2f2;
+}
+#accordion li{
+    padding: 15px 0;
 }
 
 .search-form{
@@ -193,8 +238,10 @@ header{
 .product h2{
     padding-bottom: 65px;
 }
+.card_list{
+    justify-content: center;
+}
 .card{
-    width: 100%;    
     margin: 15px;   
     border-radius: 30px; 
     overflow: hidden;
@@ -304,7 +351,10 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     padding-bottom: 65px;
 }
 .other_info .other_cont .info_box{
-    margin: 0 55px;
+    padding: 0 40px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    width: 30%;
 }
 .other_info .other_cont a{
     display: inline-block;
@@ -353,11 +403,6 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
 .blog .blog_list .blog_box a{
     display: block;       
 }
-.blog .blog_list .blog_box .gradiant_bg{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);  
-}
 .blog .blog_list .blog_box a:hover .blog_bg{
     transform: scale(1.1);  
 }
@@ -366,6 +411,15 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     padding: 185px 0;
     transition: 0.3s;
 }   
+.blog .blog_list .blog_box .blog_bg::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.23) 30%, rgba(0, 0, 0, 0) 70%);  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .blog .blog_list .blog_bg1{
     background: url('../img/blog01.jpg') no-repeat;
     background-size: cover;
@@ -419,8 +473,14 @@ footer .f_left .company_info{
 footer .f_right{
     width: 30%;
 }
+footer .f_right .sns{
+    justify-content: end;
+}
 footer .f_right .sns li{
-    margin: 0 10px;
+    padding: 5px;
+}
+footer .f_right .sns li a{
+    display: inline-block;
 }
 footer .f_right .sns i{
     font-size: 2rem;
@@ -434,31 +494,157 @@ footer .f_right .sns i{
 
 /* 미디어쿼리 */
 @media (max-width:1200px){
+    .container{
+        width: 100%;
+    }
+    /* 헤더 */
+    .gnb{
+        padding: 20px 20px;
+    }
     .search-form{
         display: none;
     }
+    /* 메인슬라이드 */
     .main-slide a .con-box .text-wrap{
-        width: 100%;
+        width: 85%;
     }
 }
 @media (max-width:1025px){
+    /* 메인슬라이드 */
     .main-slide .main-pc{
         display: none;
     }
     .main-slide .main-mo{
         display: block;
     }
+    /* 블로그 */
+    .blog .blog_list .blog_box .blog_bg{
+        padding: 160px 0;
+    }
+}
+@media (max-width:900px){
+    /* 제품찾기 */
+    .product .col-33{
+        width: 45%;
+    }
+    /* 추가정보 */
+    .other_info .other_cont .info_box {
+        margin: 0 10px;
+        padding: 0;
+    }
+    .other_info .other_cont .other_text p>br{
+        display: none;
+    }
+    /* 블로그 */
+    .blog_list{
+        flex-wrap: wrap;
+    }
+    .col-25 {
+        width: 46%;
+    }
+    /* 푸터 */
+    .footer_wrap{
+        padding: 0 2%;
+    }
+    footer .f_left{
+        padding: 0;
+    }
 }
 @media (max-width:769px){
-    .gnb{
-        
+    /* 헤더 */
+    .gnb{        
         align-items: center;
     }
-    .gnb .main-menu{
+    .logo{
+        width: 17%;
+    }
+    .mainMenu .pc-menu,
+    .member{
         display: none;
     }
     .gnb .xi-bars{
         display: block;
         font-size: 2.5rem;
+    }    
+    /* 블로그 */
+    .col-25 {
+        width: 45%;
+    }
+    /* 푸터 */
+    footer .footer_wrap{
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .f_left{
+        width: 100%;
+    }
+    footer .f_right{
+        width: 100%;
+        margin-top: 25px;
+    }
+    footer .f_right .sns {
+        justify-content: start;
+    }
+
+}
+@media (max-width:600px){
+    /* 제품찾기 */
+    .product .col-33{
+        width: 100%;
+    }
+    /* 추가정보 */
+    .other_info .other_cont .info_box{
+        width: 100%;
+        padding: 5% 15%;
+    }
+    /* 블로그 */
+    .col-25 {
+        width: 100%;
+    }
+    .blog .blog_list .blog_box h4{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+@media (max-width:541px){
+    /* .헤더 */
+    .logo{
+        width: 25%;
+    }
+    /* 메인슬라이드 */
+    .swiper-slide .text-wrap .small-tit{
+        font-size: 1rem;
+    }
+    .swiper-slide .text-wrap p {
+       font-size: 1.125rem;
+       padding-top: 20px;
+       line-height: 2rem;
+    }
+    .swiper-slide .text-wrap p span{
+        font-size: 1.750rem;
+    }
+    
+}
+@media (max-width:414px){
+    .container{
+        padding: 60px 0;
+    }
+    .sub-title{
+        font-size: 1.5rem;
+    }
+    .select_guide p{
+        display: none;
+    }
+    .product h2{
+        padding-bottom: 45px;
+    }
+    .interior h2 {
+        padding-bottom: 40px;
+    }    
+    .other_info h2 {
+        padding-bottom: 45px;
+    }
+    .other_info .other_cont h3{
+        font-size: 1.250rem;
     }
 }

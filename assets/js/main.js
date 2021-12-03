@@ -1,5 +1,6 @@
 AOS.init();
 
+// pc-menu dropDown
 $(function(){
     $('.pc-menu').mouseover(function(){
     $('.sub-menu, .subMenu_bg').stop().slideDown()
@@ -9,6 +10,31 @@ $(function(){
     $('.sub-menu, .subMenu_bg').stop().slideUp()
   });
 });
+
+// mo-menu dropDown
+// $('.mo-menu > li').click(function() {
+//   if ( $(this).hasClass('active') ) {
+//     $(this).find('.sub-menu').stop().slideUp(300);
+//     $(this).removeClass('active');
+//   }
+//   else {
+//     $(this).find('.sub-menu').stop().slideDown(300);
+//     $(this).addClass('active');
+//   }
+// });
+
+$('.xi-bars').click(function(){
+  $('#accordion').slideToggle();
+});
+
+// 모바일메뉴 아코디언
+$( function() {
+  $( "#accordion" ).accordion({
+    heightStyle: "content",
+    active:false,
+    collapsible:true
+  });
+} );
 
 // main slide Swiper
   var swiper = new Swiper(".mySwiper", {
@@ -31,7 +57,6 @@ $(function(){
     keyboard: true,
   });
 
-
   // slick slider
   $('.center').slick({
     centerMode: true,
@@ -44,7 +69,7 @@ $(function(){
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {
