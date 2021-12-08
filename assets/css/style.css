@@ -57,7 +57,6 @@ header{
 .mainMenu .pc-menu>li>a{
     padding: 20px 0;
 }
-
 .mainMenu .pc-menu .sub-menu{
     position: absolute;
     width: 100%;
@@ -128,7 +127,6 @@ header{
 #accordion li{
     padding: 15px 0;
 }
-
 .search-form{
     width: 20%;
 }
@@ -317,10 +315,13 @@ header{
 .interior .interior_slide .interior_box img:hover{
     transform: translateY(-2%);
     -webkit-box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12); 
-box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
+    box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     transition: 0.3s;
 }
-
+.interior .center .slick-center{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
 .interior_info{
     position: absolute;
     bottom: 9%;
@@ -333,14 +334,12 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     opacity: 1;
     transition: 0.3s;
 }
-
 .interior_info p{
     display: inline-block;
     padding: 10px 25px;
     background: rgba(255,255,255,0.9);
     border-radius: 50px 50px;
 }
-
 .interior .more_view{
     padding-top: 30px;
     text-decoration: underline;
@@ -445,7 +444,6 @@ box-shadow: 3px 5px 13px 3px rgba(0,0,0,0.12);
     line-height: 1.5rem;
 }
 
-
 /* 푸터 */
 footer{
     background: #444;
@@ -454,7 +452,6 @@ footer .f_left{
     width: 70%;   
     padding: 0 50px; 
 }
-
 footer .f_left .f_menu{
     color: #fff;
     margin-bottom: 30px;
@@ -490,7 +487,6 @@ footer .f_right .sns i{
     padding: 7px;
     color: #444;
 }
-
 
 /* 미디어쿼리 */
 @media (max-width:1200px){
@@ -585,7 +581,6 @@ footer .f_right .sns i{
     footer .f_right .sns {
         justify-content: start;
     }
-
 }
 @media (max-width:600px){
     /* 제품찾기 */
@@ -623,7 +618,24 @@ footer .f_right .sns i{
     .swiper-slide .text-wrap p span{
         font-size: 1.750rem;
     }
-    
+    /* 푸터 */
+    footer .f_menu{
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    footer .f_left .f_menu li{
+        padding-right: 20px;
+        padding-bottom: 5px;
+    }
+    footer .f_left .f_menu li+li{
+        margin: 0;        
+    }
+    footer .f_left .company_info{
+        padding: 0 10px;
+    }
+    footer .f_left .f_menu{
+        padding: 0 5px;
+    }
 }
 @media (max-width:414px){
     .container{
